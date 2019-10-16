@@ -4,6 +4,7 @@
 #include <fstream>
 #include <nlohmann/json.hpp>
 #include <phosphor-logging/log.hpp>
+#include <iostream>
 
 namespace phosphor
 {
