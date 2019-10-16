@@ -242,6 +242,8 @@ void Manager::updateObjects(
         updateInterfaces(absPath, objit->second, refit, newObj,
                          restoreFromCache);
 #ifdef CREATE_ASSOCIATIONS
+        std::cout << "newObj=" << newObj << std::endl;
+        std::cout << "absPath=" << absPath << std::endl;
         if (newObj)
         {
             _associations.createAssociations(absPath);
