@@ -81,7 +81,7 @@ void Manager::load()
 
 void Manager::createAssociations(const std::string& objectPath)
 {
-    std::cout << "objectpath=" << objectpath << std::endl;
+    std::cout << "objectpath=" << objectPath << std::endl;
     auto endpoints = _associations.find(objectPath);
     if (endpoints == _associations.end())
     {
