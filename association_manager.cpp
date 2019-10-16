@@ -80,6 +80,7 @@ void Manager::load()
 
 void Manager::createAssociations(const std::string& objectPath)
 {
+    std::cout << "objectpath=" << objectpath << std::endl;
     auto endpoints = _associations.find(objectPath);
     if (endpoints == _associations.end())
     {
@@ -106,6 +107,9 @@ void Manager::createAssociations(const std::string& objectPath)
 
             createAssociation(objectPath, forwardType, endpointPath,
                               reverseType);
+            std::cout << "endpointPath=" << endpointPath << std::endl;
+            std::cout << "forwardType=" << forwardType << std::endl;
+            std::cout << "reverseType=" << reverseType << std::endl;
         }
     }
 }
