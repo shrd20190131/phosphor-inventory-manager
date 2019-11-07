@@ -100,7 +100,7 @@ void Manager::createAssociations(const std::string& objectPath)
     {
         const auto& types = std::get<typesPos>(endpoint);
         const auto& paths = std::get<pathsPos>(endpoint);
-
+        std::cout << "objectPath=" << objectPath << std::endl;
         for (const auto& endpointPath : paths)
         {
             const auto& forwardType = std::get<forwardTypePos>(types);
