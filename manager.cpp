@@ -255,6 +255,7 @@ void Manager::updateObjects(
 
 void Manager::notify(std::map<sdbusplus::message::object_path, Object> objs)
 {
+    std::cout << "start create" << std::endl;
     updateObjects(objs);
 }
 
