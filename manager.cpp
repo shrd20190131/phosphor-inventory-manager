@@ -290,6 +290,7 @@ void Manager::destroyObjects(const std::vector<const char*>& paths)
 void Manager::createObjects(
     const std::map<sdbusplus::message::object_path, Object>& objs)
 {
+    std::cout << "start create" << std::endl;
     updateObjects(objs);
 }
 
