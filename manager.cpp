@@ -224,6 +224,8 @@ void Manager::updateObjects(
 
     while (objit != objs.cend())
     {
+        std::cout << "objit->first=" << objit->first << std::endl;
+        std::cout << "objit->second=" << objit->second << std::endl;
         // Find the insertion point or the object to update.
         refit = std::lower_bound(refit, _refs.end(), objit->first,
                                  compareFirst(RelPathCompare(_root)));
@@ -234,6 +236,8 @@ void Manager::updateObjects(
         newObj = false;
         if (refit == _refs.end() || refit->first != absPath)
         {
+            std::cout << "refit->first=" << refit->first << std::endl;
+            std::cout << "refit->second=" << refit->second << std::endl;
             refit = _refs.insert(
                 refit, std::make_pair(absPath, decltype(_refs)::mapped_type()));
             newObj = true;
