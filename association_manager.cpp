@@ -61,7 +61,7 @@ void Manager::load()
         {
             path = root + path;
         }
-        std::cout << "path=" << path << st::endl;
+        std::cout << "path=" << path << std::endl;
         auto& assocEndpoints = _associations[path];
 
         for (const auto& endpoint : jsonAssoc.at("endpoints"))
